@@ -85,7 +85,7 @@ public class Client {
 
     }
     public static void main(String[] args) throws UnknownHostException, IOException {
-        try (Scanner scanner = new Scanner(System.in)) {
+       Scanner scanner = new Scanner(System.in);
             System.out.println("Enter Your Username fro the Group chat: ");
             String userName = scanner.nextLine();
             // connection to port
@@ -93,6 +93,6 @@ public class Client {
             Client client = new Client(socket, userName); 
             client.listenForMessage();
             client.sendMessage();
-        }
+        
     }
 }
